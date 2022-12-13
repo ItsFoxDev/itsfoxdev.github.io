@@ -2,6 +2,7 @@
 let imgInput = document.getElementById('2png');
   imgInput.addEventListener('change', function(e) {
     if(e.target.files) {
+      fStart();
       let imageFile = e.target.files[0]; //here we get the image file
       var reader = new FileReader();
       reader.readAsDataURL(imageFile);
@@ -20,6 +21,7 @@ let imgInput = document.getElementById('2png');
           a.href = img; //Image Base64 Goes here
           a.download = "🦊 • FoxTools | Output.png"; //File name Here
           a.click(); //Downloaded file
+          fDone();
         }
       }
     }
