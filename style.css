@@ -4,12 +4,19 @@
   from {background-position: 0% center;}
   to {background-position: -200% center;}
 }
-html, body {margin:unset !important}
-.img-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+@media only screen and (max-device-width: 480px) {
+  /* Mobile */
+  header div div a.mbutton{padding:10px !important;width:42px;height:42px;}
+  header div div a.mbutton span{display:none !important;}
 }
+@media only screen and (min-device-width: 480px) {
+  /* Desktop */
+}
+
+
+html, body {margin:unset !important;scroll-behavior:smooth}
+
 body{
   font-family:Poppins;
   background:black; 
@@ -24,6 +31,7 @@ body{
   -webkit-text-fill-color: transparent;
 }
 #main-logo{
+  margin-left:2vh;
   height:7vh;
   margin-top:1.5vh;
   margin-bottom:1.5vh;
@@ -32,26 +40,51 @@ header{
   position:fixed;
   width:100%;
   height:10vh;
-  /* background-color: #000000d6; */
+  background-color: #0000008f;  
   backdrop-filter:blur(30px);
   border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
   top:0px;
   left:0px;
   right:0px;
+  z-index:100;
 }
 #content{
   padding-top:1px
 }
+#creations_container h1{
+  margin:0px;
+  font-size: 3.25rem;
+}
+#creations_container{
+  padding-bottom:20px;
+  transform: translateY(-8px);
+  background: linear-gradient(90deg, rgba(255,105,0,1) 5%, rgba(252,185,0,1) 95%);
+}
+.first-item{
+  margin-top:11vh;
+}
+#mainbanner{
+  margin-bottom: -26vh;
+  transform:translateY(-5px);
+  height: 90vh;
+  align-content: center;
+  display: grid;
+}
+
 #greeting{
-  margin-top:35vh;
   font-weight:700;
   font-size:3.5rem;
 }
 #about-me{
   font-size:1.5em;
 }
-.center{
+.center{text-align:center;}
+#title{
   text-align:center;
+  margin-top:20vh;
+  margin-left:10px;
+  font-size:4rem;
+  font-weight:700;
 }
 
 /* Credit to Hyperplexed for the buttons effect */
@@ -59,9 +92,31 @@ header{
 .link-red > i {color: rgb(239, 83, 80);}
 .link-yellow > i {color: rgb(240, 206, 81);}
 .link-purple > i {color: #5865F2}
-.mbutton {align-items: center;backdrop-filter: blur(3px);background-color: rgba(255, 255, 255, 0.05);border: 1px solid rgba(255, 255, 255, 0.1);border-radius: 6px;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);cursor: pointer;  display: inline-flex;gap: 5px;padding: 10px 20px;text-decoration: none;transition: background-color 200ms, border-color 200ms;z-index: 10000;}
+.link-blue > i {color: rgb(72, 100, 234);}
+.link-green > i {color: #43ea46}
+.link-black > i {color: #101010}
+.mbutton {align-items: center;backdrop-filter: blur(3px);background-color: rgba(255, 255, 255, 0.05);border: 1px solid rgba(255, 255, 255, 0.1);border-radius: 6px;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);cursor: pointer;  display: inline-flex;gap: 5px;padding: 10px 20px;text-decoration: none;transition: background-color 200ms, border-color 200ms;z-index: 10;}
 .mbutton:hover {background-color: rgba(255, 255, 255, 0.1);border: 1px solid rgba(255, 255, 255, 0.2);}
 .mbutton > i, .mbutton > span {height: 20px;line-height: 20px;}
 .mbutton > span {color: white;font-family: "Poppins", sans-serif;transition: color 200ms;}
 .mbutton{margin-right:5px;}
 .mbutton:last-child{margin-right:unset !important}
+
+.micon {align-items: center;backdrop-filter: blur(3px);background-color: rgba(255, 255, 255, 0.05);border: 1px solid rgba(255, 255, 255, 0.1);border-radius: 6px;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);cursor: pointer;  display: inline-flex;gap: 5px;padding: 10px 10px;text-decoration: none;transition: background-color 200ms, border-color 200ms;z-index: 10;}
+.micon:hover {background-color: rgba(255, 255, 255, 0.1);border: 1px solid rgba(255, 255, 255, 0.2);}
+.micon > i{height: 20px;line-height: 20px;width: 20px;text-align: center;}
+.micon{margin-right:5px;}
+.micon:last-child{margin-right:unset !important}
+
+#tile-container{text-align:center;margin: 0px 30px;width: auto;}
+.tile{display:inline-block;width:400px;height:126px;overflow:hidden;margin:0px 2.5px;border-radius:6px;background:rgba(255,255,255,0.3);padding:5px;border:1px solid rgba(255,255,255,0.3)}
+.tile img{width:100px;height:100px;border-radius:4px;}
+.tile *{display:inline-block}
+.tile .info{width:290px;float:right}
+.tile .info h2{margin:0px; text-align:left;width: 290px;}
+.tile .info p{margin:0px; text-align:left;width: 290px;line-height: 20px;}
+.tile button{transition:border .1s ease;background:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.3); transform:translateY(-5px);font-family:'Poppins', sans-serif;border-radius:4px;cursor:pointer;}
+.tile button:hover{border:2px solid rgba(255,255,255,0.3);}
+.tile button.solo{width:392px;}
+.tile button.duo{width:191.5px;}
+.tile button.duo:last-child{margin-left:5px;}
