@@ -106,7 +106,7 @@ header{
 .micon:hover {background-color: rgba(255, 255, 255, 0.1);border: 1px solid rgba(255, 255, 255, 0.2);}
 .micon > i{height: 20px;line-height: 20px;width: 20px;text-align: center;}
 .micon{margin-right:5px;}
-.micon:last-child{margin-right:unset !important}
+.micon:last-child{margin-right:unset !important;}
 
 #tile-container{text-align:center;margin: 0px 30px;width: auto;}
 .tile{display:inline-block;width:400px;height:126px;overflow:hidden;margin:0px 2.5px;border-radius:6px;background:rgba(255,255,255,0.3);padding:5px;border:1px solid rgba(255,255,255,0.3)}
