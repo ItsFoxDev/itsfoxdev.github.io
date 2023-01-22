@@ -1,8 +1,8 @@
 // Image to PNG
 let imgInput = document.getElementById('2png');
   imgInput.addEventListener('change', function(e) {
+    fStart();
     if(e.target.files) {
-      fStart();
       let imageFile = e.target.files[0]; //here we get the image file
       var reader = new FileReader();
       reader.readAsDataURL(imageFile);
@@ -27,7 +27,7 @@ let imgInput = document.getElementById('2png');
     }
   });
 
-// Square crop
+/* Square crop
 let sqInput = document.getElementById('sqin');
   sqInput.addEventListener('change', function(e) {
     if(e.target.files) {
@@ -52,4 +52,34 @@ let sqInput = document.getElementById('sqin');
         }
       }
     }
-  });
+  }); */
+
+var b64in = document.getElementById('b64in');
+b64in.addEventListener("change", function (e) {
+  convert();
+});
+function convert() {
+  fStart();
+  console.log('Converting...');
+ 
+  var fileInput = document.getElementById("b64in");
+
+  // Get the selected file
+  var file = fileInput.files[0];
+
+  // Create a new FileReader object
+  var reader = new FileReader();
+
+  // Set the onload event handler for the reader
+  reader.onload = function (event) {
+    // Get the result of the read operation (the data URL)
+    var dURL = event.target.result;
+    document.getElementById("toArea").value = dURL;
+    document.getElementById('toTitle').innerHTML='<i class="fa-solid fa-check"></i> Data URL Output';
+    document.getElementById('textOut').style.scale='1';
+    fDone();
+  };
+
+  // Start reading the file as a data URL
+  reader.readAsDataURL(file);
+}
