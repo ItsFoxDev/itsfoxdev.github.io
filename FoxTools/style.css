@@ -4,6 +4,58 @@
   h1{color:black !important}
 }
 *{font-family:Roboto Mono}
+body div button{
+  width:100px;
+}
+#textOut{
+  width:400px;
+  height:300px;
+  border-radius:10px;
+  background:rgba(255,255,255,0.8);
+  backdrop-filter:blur(30px);
+  position:absolute;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  justify-content:center;
+  display:grid;
+}
+#toArea{
+  width:350px;
+  height:180px;
+  margin-bottom:10px;
+  border:unset;
+  padding:5px;
+  border-radius:7.5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  font-size:13px;
+  resize: none;
+}
+#toTitle{
+  margin: 15px 0px 15px 0px;
+  text-align: center;
+}
+#textOut div button{
+  transition: scale .3s ease;
+  width:177.5px;
+  border:unset;
+  border-radius:6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background:white;
+  cursor:pointer;
+  height:25px;
+}
+#textOut div button:hover{
+  scale:1.05;
+}
+#textOut div{
+  margin-bottom:15px;
+}
+#textOut div button:first-of-type{
+  margin-right:5px;
+}
+
 .button-57 {
   position: relative;
   overflow: hidden;
