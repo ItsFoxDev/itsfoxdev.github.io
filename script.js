@@ -46,3 +46,4 @@ solo('Userscripts','Useful mini-scripts','userscripts','https://itsfoxdev.github
 duo('FoxClient','An Eaglercraft fork','foxclient','https://itsfoxdev.github.io/FoxClient/1.5/','fas fa-arrow-up-right-from-square','https://itsfoxdev.github.io/FoxClient/1.5/','fas fa-code','https://github.com/ItsFoxDev/itsfoxdev.github.io/tree/main/FoxClient/1.5/')
 solo('fa-turbo','Fast Font Awesome','fa-turbo','https://github.com/ItsFoxDev/fa-turbo','fa-brands fa-github','https://github.com/ItsFoxDev/fa-turbo/');
 solo('FoxCMD','A CLI for macOS','foxcmd','https://github.com/ItsFoxDev/FoxCMD','fa-brands fa-github','https://github.com/ItsFoxDev/FoxCMD/');
+solo('Separator','For your bookmarks','separator','https://itsfoxdev.github.io/Separator','fas fa-arrow-up-right-from-square','https://itsfoxdev.github.io/Separator');
