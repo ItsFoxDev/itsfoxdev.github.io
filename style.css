@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 @import url("https://cdn.jsdelivr.net/gh/ItsFoxDev/API/AvenirWebFont/import.css");
-@media (prefers-color-scheme: light) {
+/*@media (prefers-color-scheme: light) {
   body{background: whitesmoke;}
   :root{
     --col-popout: #ededed;
@@ -13,6 +13,9 @@
     --col-popout: #0f0f0f;
     --text-col-m: #ededed;
   }
+} */
+:root{
+  --text-col-m: #ededed !important;
 }
 @keyframes background-pan {
   from {background-position: 0% center;}
@@ -183,7 +186,7 @@ header{
   text-align:center;
   display:inline-block;
   width:150px;
-  color:white;
+  color:var(--text-col-m);
 }
 .icos i{
   transition:scale .4s;
