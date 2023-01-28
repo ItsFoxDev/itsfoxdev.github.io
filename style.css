@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
+@import url("https://cdn.jsdelivr.net/gh/ItsFoxDev/API/AvenirWebFont/import.css");
+@media (prefers-color-scheme: light) {
+  body{background: whitesmoke;}
+  :root{
+    --col-popout: #ededed;
+    --text-col-m: #0f0f0f;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body{background: #0a0a20;}
+  :root{
+    --col-popout: #0f0f0f;
+    --text-col-m: #ededed;
+  }
+}
 @keyframes background-pan {
   from {background-position: 0% center;}
   to {background-position: -200% center;}
@@ -107,16 +121,86 @@ header{
 .micon > i{height: 20px;line-height: 20px;width: 20px;text-align: center;}
 .micon{margin-right:5px;}
 .micon:last-child{margin-right:unset !important;}
-
-#tile-container{text-align:center;margin: 0px 30px;width: auto;}
-.tile{display:inline-block;width:400px;height:126px;overflow:hidden;margin:0px 2.5px;border-radius:6px;background:rgba(255,255,255,0.3);padding:5px;border:1px solid rgba(255,255,255,0.3)}
-.tile img{width:100px;height:100px;border-radius:4px;}
-.tile *{display:inline-block}
-.tile .info{width:290px;float:right}
-.tile .info h2{margin:0px; text-align:left;width: 290px;}
-.tile .info p{margin:0px; text-align:left;width: 290px;line-height: 20px;}
-.tile button{transition:border .1s ease;background:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.3); transform:translateY(-5px);font-family:'Poppins', sans-serif;border-radius:4px;cursor:pointer;}
-.tile button:hover{border:2px solid rgba(255,255,255,0.3);}
-.tile button.solo{width:392px;}
-.tile button.duo{width:191.5px;}
-.tile button.duo:last-child{margin-left:5px;}
+.thumb{
+  width:150px;
+  height:150px;
+  border-radius:10px;
+  z-index:100;
+  position:relative;
+}
+.item{
+  margin-right:15px;
+  border-radius:10px;
+  transition:all .4s;
+  width:150px;
+  height:150px;
+  cursor: pointer;
+  display:inline-block;
+  margin-bottom:15px;
+}
+.item:hover{
+  z-index:999;
+  scale:1.1;
+  transform:translateY(-20px);
+  height:225px;
+  margin-bottom:-75px;
+}
+.popout{
+  padding-top:50px;
+  transform:translateY(-153px);
+  height:99px;
+  background: transparent;
+  backdrop-filter:blur(30px);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 60%);
+  z-index:1;
+  border-radius:10px;
+  transition: all .4s;
+}
+.item:hover .popout{
+  /* transform:translateY(0px); */
+  height:75px; /**/
+  padding-top:150px;
+}
+.title{
+  color: var(--text-col-m);
+  width: 150px;
+  text-align:center;
+  display:inline-block;
+  font-family:'Avenir Next Demi';
+}
+.desc{
+  color:var(--text-col-m);
+  width: 150px;
+  font-size:13.5px;
+  text-align:center;
+  display:inline-block;
+  font-family:'Avenir Next Reg';
+  line-height: 19px;
+  max-height: 19px;
+}
+.icos{
+  margin-top:4px;
+  text-align:center;
+  display:inline-block;
+  width:150px;
+  color:white;
+}
+.icos i{
+  transition:scale .4s;
+  margin-right:7.5px;
+}
+.icos i:last-child{
+  margin-right:unset !important;
+}
+.icos i:hover{
+  scale:1.2;
+}
+#items{
+  justify-content:center;
+  display:flex;
+  flex-wrap:wrap;
+  width:90vw;
+  margin-top:10vw;
+  margin-left:5vw;
+  margin-right:5vw;
+}
