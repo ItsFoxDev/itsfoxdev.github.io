@@ -47,4 +47,4 @@ duo('FoxClient','An Eaglercraft fork','foxclient','https://itsfoxdev.github.io/F
 solo('fa-turbo','Fast Font Awesome','fa-turbo','https://github.com/ItsFoxDev/fa-turbo','fa-brands fa-github','https://github.com/ItsFoxDev/fa-turbo/');
 solo('FoxCMD','A CLI for macOS','foxcmd','https://github.com/ItsFoxDev/FoxCMD','fa-brands fa-github','https://github.com/ItsFoxDev/FoxCMD/');
 solo('Separator','For your bookmarks','separator','https://itsfoxdev.github.io/Separator','fas fa-arrow-up-right-from-square','https://itsfoxdev.github.io/Separator');
-duo('PasteZone','Temporary text editor','pastezone','https://itsfoxdev.github.io/Pastezone','fas fa-arrow-up-right-from-square','https://itsfoxdev.github.io/Pastezone','fas fa-code','https://github.com/ItsFoxDev/PasteZone')
+duo('PasteZone','Temporary text editor','pastezone','https://itsfoxdev.github.io/PasteZone','fas fa-arrow-up-right-from-square','https://itsfoxdev.github.io/PasteZone','fas fa-code','https://github.com/ItsFoxDev/PasteZone')
