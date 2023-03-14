@@ -4,7 +4,7 @@
   body{background: whitesmoke;}
   :root{
     --col-popout: #ededed;
-    --text-col-m: #0f0f0f;
+    --text-col-m: #0f0f0f; 
   }
 }
 @media (prefers-color-scheme: dark) {
