@@ -12,7 +12,7 @@ wm.id="foxdevwm";
 wm.style.transition="all .3s";
 wm.addEventListener("click", ofds);
 let wms = document.createElement('style');
-wms.innerHTML="#foxdevwm{scale:1.1;transform:translate(3px, -3px)}";
+wms.innerHTML="#foxdevwm:hover{scale:1.1;transform:translate(3px, -3px)}";
 document.head.appendChild(wms);
 document.body.appendChild(wm);
 function ofds(){
