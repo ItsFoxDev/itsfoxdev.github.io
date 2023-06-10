@@ -22,7 +22,6 @@
     --accent: #fc8d1e;
     --hover-filter: brightness(0.9);
     --shadow:0px 0px 10px 5px rgba(0,0,0,0.1);
-    --bigshadow-opacity:0.2;
   }
 }
 body{
@@ -103,6 +102,7 @@ tag.active{
   display: flex;
   justify-content: center;
   gap: 10px;
+  flex-wrap:wrap;
 }
 a[tile]{
   cursor:pointer;
