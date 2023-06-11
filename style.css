@@ -37,8 +37,9 @@
     --sm:2;
   }
   tag{font-size:0px;}
-  tag i{font-size:32px !important;}
-  tag.active{font-size:32px !important;}
+  tag::before{margin-right:0px;}
+  tag.active::before{margin-right:0px !important;}
+  tag.active,tag::before{font-size:43px !important;}
 }
 body{
   background:var(--bg);
@@ -82,7 +83,6 @@ body{
   filter:blur(10px);
   z-index:1;
   position: absolute;
-  left:10px;
   opacity:0.4
 }
 .blurh{
@@ -97,18 +97,27 @@ body{
   padding:5px;
   box-sizing:border-box;
   box-shadow:var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  align-content: center;
 }
 tag{
   box-sizing: border-box;
   background:var(--raised);
-  display:inline-block;
-  height:calc(24px * var(--sm));;
+  display:inline-block;/*
+  height:calc(24px * var(--sm));;*/
   border-radius:7.5px;
-  padding:5px 10px;
+  padding:calc(2.5px * var(--sm)) calc(7.5px * var(--sm));
   color:var(--text-sub);
   font-weight:500;
   cursor:pointer;
   transition:filter .3s ease, color .3s ease, background .3s ease,font-size .3s ease;
+}
+tag::before{
+  font-weight: 300;
+  font-family: "Font Awesome 6 Pro";
+  margin-right:5px;
 }
 tag:hover{
   filter:var(--hover-filter);
