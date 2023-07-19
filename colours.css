@@ -1,0 +1,27 @@
+/* =====[ ☀️ L I G H T ]===================== */
+@media (prefers-color-scheme: light) {
+  :root{
+    --bg:white;
+    --bgblur:rgba(255,255,255,0.2);
+    --buttoncol:rgb(233, 233, 233);
+    --border:1px solid rgba(0,0,0,0.1);
+    --hovfilter:brightness(0.8);
+    --text:black;
+  }
+}
+
+/* =====[ 🌑 D A R K ]===================== */
+:root{
+  --bg:black;
+  --bgblur:rgba(17, 17, 17, 0.2);
+  --buttoncol:rgb(19, 19, 19);
+  --border:1px solid rgba(255, 255, 255, 0.1);
+  --hovfilter:brightness(1.2);
+  --text:white;
+}
+
+
+/* =====[ 🌐 G L O B A L ]===================== */
+:root{
+  --blur:blur(10px);
+}

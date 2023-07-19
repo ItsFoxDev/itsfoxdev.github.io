@@ -1,0 +1,141 @@
+/* =====[ ⬇️ I M P O R T S ]===================== */
+@import url("https://itsfoxdev.github.io/API/fonts/gilroy/import.css");
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+  margin:0px;
+  background:var(--bg);
+  overflow-x:hidden;
+}
+.imgblur{
+  filter:blur(5px);
+  opacity:0.5;
+  position:absolute;
+  inset:0px;
+}
+.blurcont{
+  display:block;
+  position:relative;
+}
+.blurcont img{
+  width:100%;
+  height:100%;
+}
+
+/* =====[ ⬆️ H E A D E R ]===================== */
+header{
+  position: absolute;
+  z-index: 100;
+}
+#hcontent{
+  width:calc(100vw - 50px);
+  height:75px;
+  background:var(--bgblur);
+  border-radius:10px;
+  margin:25px;
+  border:var(--border);
+  display:flex;
+  padding:10px;
+  box-sizing:border-box;
+  align-items: center;
+  gap:10px;
+  backdrop-filter:var(--blur)
+}
+#headerimg{
+  height:100%;
+}
+#title{
+  font-family:Gilroy;
+  font-weight:800;
+  font-size:40px;
+  color:transparent;
+  background: linear-gradient(180deg, rgba(255,141,58,1) 0%, rgba(255,97,45,1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+#navbuttons{
+  height:100%;
+  margin-left:auto;
+}
+#navbuttons button{
+   height:100%;
+   aspect-ratio: 1 / 1;
+   border-radius:10px;
+   font-size:16px
+}
+
+
+/* =====[ 🌐 G L O B A L ]===================== */
+button{
+  transition:filter .2s ease;
+  filter:none;
+  background:var(--buttoncol);
+  color:var(--text);
+  border:var(--border);
+  cursor:pointer;
+}
+button:hover{
+  filter:var(--hovfilter);
+}
+
+
+hero{
+  width:100vw;
+  height:100vh;
+}
+
+/* =====[ 1️⃣ H E R O   O N E ]===================== */
+hero#hmain{
+  display:flex;
+  object-fit:fill;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(255, 120, 52, 0.158) 2px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 120, 52, 0.158) 2px, transparent 1px);
+}
+#hmain .vignette{
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items:center;
+}
+#hmain h1{
+  font-size:65px;
+  margin:0px;
+}
+#hmain h3{
+  font-size:30px;
+  opacity:0.7;
+  margin:0px;
+}
+#scrolldown{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom:25px;
+  font-size:20px;
+  z-index:2;
+  cursor:pointer;
+  align-items: center;
+  text-decoration: none;
+}
+
+
+.vignette{
+  z-index:1;
+  width:100%;
+  height:100%;
+  background:radial-gradient(circle, rgba(255,255,255,0) 22%, rgba(0,0,0,1) 100%);
+}
+
+*{
+  color:var(--text);
+  font-family:Gilroy;
+}
