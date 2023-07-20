@@ -26,7 +26,7 @@ body{
 
 /* =====[ ⬆️ H E A D E R ]===================== */
 header{
-  position: absolute;
+  position: fixed;
   z-index: 100;
 }
 #hcontent{
@@ -87,7 +87,7 @@ hero{
 }
 
 /* =====[ 1️⃣ H E R O   O N E ]===================== */
-hero#hmain{
+#home{
   display:flex;
   object-fit:fill;
   position: relative;
@@ -98,7 +98,7 @@ hero#hmain{
     linear-gradient(to right, rgba(255, 120, 52, 0.158) 2px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 120, 52, 0.158) 2px, transparent 1px);
 }
-#hmain .vignette{
+#home .vignette{
   display:flex;
   flex-direction: column;
   align-content: center;
@@ -106,11 +106,11 @@ hero#hmain{
   flex-wrap: wrap;
   align-items:center;
 }
-#hmain h1{
+#home h1{
   font-size:65px;
   margin:0px;
 }
-#hmain h3{
+#home h3{
   font-size:30px;
   opacity:0.7;
   margin:0px;
@@ -126,16 +126,84 @@ hero#hmain{
   align-items: center;
   text-decoration: none;
 }
+#projects{
+  padding-top:100px;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  /*background-size: 30px 30px;
+  background-image: radial-gradient(circle, #ff783428 2px, rgba(0, 0, 0, 0) 1px);*/
+}
+#projects h1{
+  font-size:45px; 
+}
 
 
 .vignette{
   z-index:1;
   width:100%;
   height:100%;
-  background:radial-gradient(circle, rgba(255,255,255,0) 22%, rgba(0,0,0,1) 100%);
+  background:
+    radial-gradient(circle, rgba(255,255,255,0) 22%, rgba(0,0,0,1) 100%),
+    linear-gradient(180deg, rgba(255,255,255,0) 54%, rgba(0,0,0,1) 100%);
 }
 
 *{
   color:var(--text);
   font-family:Gilroy;
+}
+
+/* =====[ 🖼️ T I L E S ]====================*/
+:root{
+  --tw:180px;
+}
+#tiles a{
+  display:block;
+  width:var(--tw);
+  height:var(--tw);
+  position:relative;
+  border-radius:25%;
+  overflow:hidden;
+  transition:scale 0.5s cubic-bezier(.49,.01,0,1.01);
+  cursor:pointer;
+}
+#tiles a:hover{
+  scale:1.1;
+}
+.thumbnail,.thumbnail img{
+  width:var(--tw);
+  height:var(--tw);
+  border-radius:25%;
+  position:absolute;
+}
+.details{
+  backdrop-filter: var(--blur);
+  background:var(--bgbs);
+  z-index:3;
+  position: absolute;
+  width:100%;
+  box-sizing:border-box;
+  bottom:0px;
+  overflow:hidden;
+  padding:0px 10px 0px 10px;
+  border-radius:0px 0px calc(var(--tw) * 0.25) calc(var(--tw) * 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height:0px;
+  transition:height .5s cubic-bezier(.49,.01,0,1.01),padding .5s cubic-bezier(.49,.01,0,1.01);
+}
+#tiles a:hover .details{
+  height:84px;
+  padding:5px 10px 10px 10px;
+}
+.title{
+  font-weight:bold;
+  font-size:25px
+}
+#tiles{
+  display:flex;
+  gap:25px;
+  flex-wrap:wrap;
 }

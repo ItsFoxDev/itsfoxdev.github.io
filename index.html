@@ -17,15 +17,15 @@
 				<img id="headerimg" src="icon.png">
 				<h1 id="title">FoxDev</h1>
 				<div id="navbuttons">
-					<button><i class="fas fa-home"></i></button>
-					<button><i class="fas fa-books"></i></button>
-					<button><i class="fas fa-address-card"></i></button>
+					<a href="#home"><button><i class="fas fa-home"></i></button></a>
+					<a href="#projects"><button><i class="fas fa-books"></i></button></a>
+					<a href="#home"><button><i class="fas fa-address-card"></i></button></a>
 				</div>
 			</div>
 		</header>
 		
 
-		<hero id="hmain">
+		<hero id="home">
 			<div class="vignette">
 				<h1 id="h1title">Hi, I'm FoxDev.</h1>
 				<h3>Website under construction.</h3>
@@ -37,7 +37,33 @@
 		</hero>
 
 		<hero id="projects">
-			<h1>Projects</h1>
+			<h1>My Projects</h1>
+			<div id="tiles">
+
+				<a>
+					<div class="thumbnail blurcont">
+						<img src="res/tiles/dash.png">
+						<img class="imgblur" src="res/tiles/dash.png">
+					</div>
+					<div class="details">
+						<span class="title">dash.</span>
+						<span class="desc">A feature-packed web dashboard.</span>
+					</div>
+				</a>
+
+				
+				<a href="https://itsfoxdev.github.io/Screentest">
+					<div class="thumbnail blurcont">
+						<img src="res/tiles/screentest.png">
+						<img class="imgblur" src="res/tiles/screentest.png">
+					</div>
+					<div class="details">
+						<span class="title">Screentest</span>
+						<span class="desc">A simple screen testing site.</span>
+					</div>
+				</a>
+
+			</div>
 		</hero>
 	</body>
 </html>

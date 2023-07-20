@@ -3,6 +3,7 @@
   :root{
     --bg:white;
     --bgblur:rgba(255,255,255,0.2);
+    --bgbs:rgba(255,255,255,0.5);
     --buttoncol:rgb(233, 233, 233);
     --border:1px solid rgba(0,0,0,0.1);
     --hovfilter:brightness(0.8);
@@ -14,6 +15,7 @@
 :root{
   --bg:black;
   --bgblur:rgba(17, 17, 17, 0.2);
+  --bgbs:rgba(17, 17, 17, 0.5);
   --buttoncol:rgb(19, 19, 19);
   --border:1px solid rgba(255, 255, 255, 0.1);
   --hovfilter:brightness(1.2);
