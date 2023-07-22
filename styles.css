@@ -1,0 +1,186 @@
+body{
+  background:var(--bg);
+  margin:0px;
+}
+html{
+  scrollbar-gutter: stable;
+  overflow-x:hidden;
+}
+*{
+  color:var(--text);
+  font-family:Gilroy
+}
+#background,#vignette{
+  position:fixed;
+  inset:0px;
+  z-index:-1;
+  width:100vw;
+  height:100vh;
+}
+#background{
+  background-size: 30px 30px;
+  background-image: radial-gradient(circle, var(--dots) 2px, transparent 1px);
+  animation:background 40s linear infinite
+}
+#vignette{
+  z-index:-1;
+  background-image: radial-gradient(ellipse, transparent 0%, var(--bg) 100%);
+}
+
+@keyframes background{
+  0% {background-position: 50px 0px;}
+  100% {background-position: 1000px 100px;}
+}
+
+#hero{
+  width:100vw;
+  height:500px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#hero h1{
+  font-size:55px;
+  font-weight:800;
+  margin:0px;
+}
+#hero h3{
+  font-size:35px;
+  font-weight:600;
+  margin:0px;
+  opacity:0.7;
+}
+button{
+  background:var(--bgsub);
+  border:var(--border);
+  border-radius:10px;
+  font-size: 20px;
+  cursor:pointer;
+  padding:15px 30px;
+  transition:filter .2s ease;
+  filter:none;
+  box-sizing:border-box;
+}
+button[primary]{
+  position:relative;
+  background:linear-gradient(119deg, rgba(255,105,0,1) 0%, rgba(255,169,0,1) 91%) !important;
+  font-weight:bold;
+  border:var(--borderi);
+  box-shadow:
+    0px 0px 10px 3px var(--primshadow),
+    inset 2px 2px 4px 1px rgba(0, 0, 0, 0.342);
+  transition:color .2s ease;
+  scale:1;
+}
+button[primary],button[primary] *{
+  color:#ff8600;
+  transition:color .2s ease;
+}
+button[primary]::after{
+  position:absolute;
+  inset:1px;
+  content:"";
+  display:block; 
+  width:calc(100% - 2px);
+  height:calc(100% - 2px);
+  background:var(--bg);
+  border-radius:9px;
+  z-index:-111;
+  transition:opacity .2s ease;
+}
+button[primary]:hover::after{
+  opacity:0;
+}
+button[primary]:hover{
+  filter:none;
+  box-shadow:
+    0px 0px 10px 2px #ffa60036,
+    inset 0px 0px 4px 2px rgba(214, 139, 0, 0.336);
+}
+button[primary]:hover, button[primary]:hover *{
+  color:var(--bg);
+}
+button:hover{
+  filter:var(--hovfilter);
+}
+#herobtns{
+  padding-top:20px;
+  display: flex;
+  gap:20px;
+}
+*[bento] .single{
+  aspect-ratio: 1 / 1;
+}
+*[bento] .double{
+  grid-column:span 2;
+  height:100%;
+}
+*[bento3]{
+  grid-template-columns: 1fr 1fr 1fr !important;
+}
+*[bento]{
+  max-width:1000px;
+  margin:auto;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap:25px;
+}
+*[bento] > *{
+  background:var(--blurbg);
+  border:var(--border);
+  box-sizing:border-box;
+  border-radius:10px;
+  backdrop-filter:blur(10px);
+  padding:10px;
+  display:flex;
+  flex-direction: column;
+}
+.bentocont{
+  margin:0px 50px;
+}
+*[bento] *{
+  text-align:center;
+}
+.big{
+  font-weight:bolder;
+  font-size:40px;
+}
+#infobento > div{
+  background-size: 50%;
+  transition:background-size .2s ease-out, filter .2s ease;
+  background-blend-mode: lighten; 
+  background-position: center;
+  background-repeat:no-repeat;
+}
+#infobento > div:hover{
+  background-size: 55%;
+}
+#projcount{
+  background-image:url("/res/logos/globe.svg");
+}
+#ghcommits{
+  background-image:url("/res/logos/github.svg");
+}
+#projects > div{
+  position:relative;
+}
+#projects > div > img{
+  position:absolute;
+  width:100%;
+  height:100%;
+  inset:0px;
+  border-radius:10px;
+}
+*[bento] > div{
+  transition:filter .2s ease;
+  cursor:pointer;
+}
+*[bento] > div:hover{
+  filter:brightness(1.3);
+}
+
+#infobento > div{
+  border: bevel;
+}

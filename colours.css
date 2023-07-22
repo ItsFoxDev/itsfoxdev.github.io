@@ -1,0 +1,34 @@
+@media (prefers-color-scheme: light) {
+  :root{
+    --bg:#dfdfdf;
+    --text:#070707;
+    --dots:#42424257;
+    --blurbg:#00000013;
+    --borderc:#0000002f;
+    --borderci:#ffffff2f;
+    --bgsub:#dfdfdf;
+    --hovfilter:brightness(0.8);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root{
+    --bg:#070707;
+    --text:#dfdfdf;
+    --dots:#e7e7e728;
+    --blurbg:#ffffff13;
+    --borderc:#ffffff2f;
+    --borderci:#0000002f;
+    --bgsub:#252525;
+    --hovfilter:brightness(1.4);
+  }
+}
+:root{
+  --border:1px solid var(--borderc);
+  --borderi:1px solid var(--borderci);
+}
+*[center]{
+  text-align:center;
+}
+h1[big]{
+  font-size:45px;
+}
