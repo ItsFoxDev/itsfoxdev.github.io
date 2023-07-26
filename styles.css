@@ -74,7 +74,17 @@ div.example {
   margin:0px;
   opacity:0.7;
 }
-button{
+#toplogo{
+  width:128px;
+  height:128px;
+  -webkit-mask-image:url("https://itsfoxdev.github.io/resources/assets/logo.svg");
+  -webkit-mask-size:128px;
+  mask-image:url("https://itsfoxdev.github.io/resources/assets/logo.svg");
+  mask-size:128px;
+  background: linear-gradient(to bottom, #ffb300 0%, #ff6600 100%);
+  margin-bottom:15px;
+}
+button,#herobtns > a{
   background:var(--bgsub);
   border:var(--border);
   border-radius:10px;
@@ -84,8 +94,9 @@ button{
   transition:filter .2s ease;
   filter:none;
   box-sizing:border-box;
+  text-decoration: none;
 }
-button[primary]{
+button[primary],#herobtns > a[primary]{
   position:relative;
   background:linear-gradient(119deg, rgba(255,105,0,1) 0%, rgba(255,169,0,1) 91%) !important;
   font-weight:bold;
@@ -95,12 +106,14 @@ button[primary]{
     inset 2px 2px 4px 1px rgba(0, 0, 0, 0.342);
   transition:color .2s ease;
   scale:1;
+  transition:box-shadow .2s ease,color .2s ease !important;
 }
-button[primary],button[primary] *{
+button[primary],button[primary] *,#herobtns > a[primary],#herobtns > a[primary] *{
   color:#ff8600;
-  transition:color .2s ease;
+  transition:box-shadow .2s ease,color .2s ease !important;
+  text-decoration: none;
 }
-button[primary]::after{
+button[primary]::after,#herobtns > a[primary]::after{
   position:absolute;
   inset:1px;
   content:"";
@@ -112,16 +125,16 @@ button[primary]::after{
   z-index:-111;
   transition:opacity .2s ease;
 }
-button[primary]:hover::after{
+button[primary]:hover::after,#herobtns > a[primary]:hover::after{
   opacity:0;
 }
-button[primary]:hover{
+button[primary]:hover,#herobtns > a[primary]:hover{
   filter:none;
   box-shadow:
     0px 0px 10px 2px #ffa60036,
     inset 0px 0px 4px 2px rgba(214, 139, 0, 0.336);
 }
-button[primary]:hover, button[primary]:hover *{
+button[primary]:hover, button[primary]:hover *,#herobtns > a[primary]:hover,#herobtns > a[primary]:hover *{
   color:var(--bg);
 }
 button:hover{
@@ -242,4 +255,25 @@ header{
   border-radius:10px;
   height:75px;
   border:var(--border);
+}
+#socialsgrid{
+  display:grid;
+  grid-template-columns: var(--mainbento);
+  max-width:1000px;
+}
+#socialsgrid a{
+  padding:10px;
+  background:var(--col);
+  aspect-ratio: 3 / 1;
+  display:flex;
+  align-items:center;
+}
+#socialsgrid a i{
+  width:0px;
+  font-size:40px;
+}
+#socialsgrid .sgradient{
+  width:65px;
+  height:100%;
+  background: linear-gradient(90deg, transparent 30%, var(--col) 91%);
 }
