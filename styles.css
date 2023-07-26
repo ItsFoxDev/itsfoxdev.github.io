@@ -2,46 +2,31 @@ body{
   background:var(--bg);
   margin:0px;
 }
+html{
+  scrollbar-gutter: stable;
+  overflow-x:hidden;
+  scroll-behavior: smooth;
+}
 *[only3]{
   display:none !important;
 }
 @media (min-width: 600px) and (max-width: 800px){
-  :root{
-    --mainbento:1fr 1fr 1fr !important;
-  }
-  *[only3]{
-    display:block !important;
-  }
-  *[hide3]{
-    display:none !important;
-  }
+  :root{--mainbento:1fr 1fr 1fr !important;}
+  *[only3]{display:block !important;}
+  *[hide3]{display:none !important;}
 }
 @media (max-width: 600px){
-  :root{
-    --mainbento:1fr 1fr !important;
-  }
-  *[bento] > .double{
-    aspect-ratio: 2.2 / 1 !important;
-  }
-  *[only3]{
-    display:block !important;
-  }
-  *[hide3]{
-    display:none !important;
-  }
+  :root{--mainbento:1fr 1fr !important;}
+  *[bento] > .double{aspect-ratio: 2.2 / 1 !important;}
+  *[only3]{display:block !important;}
+  *[hide3]{display:none !important;}
 }
+:root{--mainbento:1fr 1fr 1fr 1fr;}
 div.example {
   font-size: 50px;
   padding: 50px;
   border: 8px solid black;
   background: yellow;
-}
-:root{
-  --mainbento:1fr 1fr 1fr 1fr;
-}
-html{
-  scrollbar-gutter: stable;
-  overflow-x:hidden;
 }
 *{
   color:var(--text);
@@ -194,24 +179,29 @@ button:hover{
 #infobento > div:hover{
   background-size: 55%;
 }
+
 #projcount{
   background-image:url("/res/logos/globe.svg");
 }
 #ghcommits{
   background-image:url("/res/logos/github.svg");
 }
-#projects > a{
+html.light #projcount{background-image:url("/res/logos/light/globe.svg") !important;}
+html.light #ghcommits{background-image:url("/res/logos/light/github.svg") !important;}
+html.light #infobento > div{background-blend-mode:normal !important;}
+
+#projectgrid > a{
   position:relative;
   overflow: hidden;
 }
-#projects > a > img{
+#projectgrid > a > img{
   position:absolute;
   width:100%;
   inset:0px;
   transition:scale .2s ease,rotate .2s ease;
   scale:1;
 }
-#projects > a::after{
+#projectgrid > a::after{
   content:"";
   position:absolute;
   width:100%;
@@ -221,12 +211,12 @@ button:hover{
   transition:border .2s, width .2s, height .2s;
   inset:0px;
 }
-#projects > a:hover::after{
+#projectgrid > a:hover::after{
   border: 3px solid white;
   width:calc(100% - 6px);
   height:calc(100% - 6px);
 }
-#projects > a:hover > img{
+#projectgrid > a:hover > img{
   scale:1.035;
 }
 *[bento] > a{
