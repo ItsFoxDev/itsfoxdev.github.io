@@ -2,6 +2,43 @@ body{
   background:var(--bg);
   margin:0px;
 }
+*[only3]{
+  display:none !important;
+}
+@media (min-width: 600px) and (max-width: 800px){
+  :root{
+    --mainbento:1fr 1fr 1fr !important;
+  }
+  *[only3]{
+    display:block !important;
+  }
+  *[hide3]{
+    display:none !important;
+  }
+}
+@media (max-width: 600px){
+  :root{
+    --mainbento:1fr 1fr !important;
+  }
+  *[bento] > .double{
+    aspect-ratio: 2.2 / 1 !important;
+  }
+  *[only3]{
+    display:block !important;
+  }
+  *[hide3]{
+    display:none !important;
+  }
+}
+div.example {
+  font-size: 50px;
+  padding: 50px;
+  border: 8px solid black;
+  background: yellow;
+}
+:root{
+  --mainbento:1fr 1fr 1fr 1fr;
+}
 html{
   scrollbar-gutter: stable;
   overflow-x:hidden;
@@ -124,7 +161,7 @@ button:hover{
   max-width:1000px;
   margin:auto;
   display:grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: var(--mainbento);
   gap:25px;
 }
 *[bento] > *{
