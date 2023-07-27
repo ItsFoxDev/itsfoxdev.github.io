@@ -29,6 +29,7 @@ html{
     --hbuts:1fr !important;
     --sbig:16px !important;
     --ssmall: 12px !important;
+    --sbento:1fr 1FR !important;
   }
 }
 :root{
@@ -39,6 +40,7 @@ html{
   --bgap:25px;
   --bmar:50px;
   --sbig:20px;
+  --hbuts:1fr 1fr;
   --ssmall:16px;
 }
 *{
@@ -158,6 +160,7 @@ button:hover,#herobtns > a:hover{
   padding-top:20px;
   display: grid;
   gap:20px;
+  grid-template-columns: var(--hbuts);
 }
 *[bento] .single{
   aspect-ratio: 1 / 1;
@@ -215,8 +218,8 @@ button:hover,#herobtns > a:hover{
 #ghcommits{
   background-image:url("/res/logos/github.svg");
 }
-html.light #projcount{background-image:url("/res/logos/light/globe.svg") !important;}
-html.light #ghcommits{background-image:url("/res/logos/light/github.svg") !important;}
+html.light #projcount{background-image:url("/res/logos/globelight.svg") !important;}
+html.light #ghcommits{background-image:url("/res/logos/githublight.svg") !important;}
 html.light #infobento > div{background-blend-mode:normal !important;}
 
 #projectgrid > a{
@@ -272,62 +275,19 @@ header{
   height:75px;
   border:var(--border);
 }
-#socialsgrid{
-  display:grid;
-  grid-template-columns: var(--sbento);
-  max-width:1000px;
-  gap:15px;
-  margin:auto;
+
+button[small]{
+  padding:5px 10px;;
 }
-#socialsgrid a{
-  padding:10px;
-  background:var(--col);
-  aspect-ratio: 3 / 1;
+#bottom{
   display:flex;
-  align-items:center;
-  border-radius:10px;
-  cursor:pointer;
-  text-decoration: none;
+  margin:20px 50px;
+  flex-wrap:wrap;
+  align-content: center;
+  justify-content: center;
+  gap:10px;
 }
-#socialsgrid a[black] {
-  color:black !important;
-}
-#socialsgrid a i{
-  width:50px;
-  text-align:right;
-  margin-right:-60px;
-  font-size:40px;
-  transition:transform .2s ease,scale .2s ease;
-}
-#socialsgrid a[large] i{
-  font-size:50px;
-}
-#socialsgrid .sgrad{
-  width:70px;
-  height:100%;
-  z-index:1;
-  background: linear-gradient(90deg, transparent 30%, var(--col) 91%);
-  transition:transform .2s ease;
-}
-#socialsgrid .sdet{
-  display:flex;
-  flex-direction: column;
-  z-index:3;
-}
-#socialsgrid .sdet *{
-  font-size:1rem;
-}
-#socialsgrid .stitle{
-  font-weight:bold;
-  font-size:var(--sbig);
-}
-#socialsgrid .ssubtitle{
-  font-size:var(--ssmall);
-}
-#socialsgrid a:hover i{
-  transform:translatex(-10px);
-  scale:1.15;
-}
-#socialsgrid a:hover .sgrad{
-  transform:translatex(10px);
-}
+
+*[lightonly]{display:none;}
+html.light *[darkonly]{display:none;}
+html.light *[lightonly]{display:block;}

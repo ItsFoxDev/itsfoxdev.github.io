@@ -2,7 +2,10 @@
 <html>
   <head>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="css/socialsgrid.css">
     <link rel="stylesheet" href="colours.css">
+    <script src="scripts.js"></script>
     <link rel="stylesheet" href="lib/scrollbar.css">
     <link rel="stylesheet" href="https://itsfoxdev.github.io/resources/fonts/gilroy/import.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ItsFoxDev/fa-turbo/css/all.min.css" />
@@ -102,8 +105,8 @@
             <span class="ssubtitle">_pvpfox</span>
         </div></a>
 
-        <a black large href="https://sky.shiiyu.moe/stats/_pvpfox/Papaya" style="--col:#ff952b">
-          <i class="fas fa-chart-simple"></i><div class="sgrad"></div><div class="sdet">
+        <a black large href="https://scratch.mit.edu/users/ItsFoxDev" style="--col:#ff952b">
+          <i style="display: flex;"><img height="55" src="res/logos/scratch.png"></i><div class="sgrad"></div><div class="sdet">
             <span class="stitle">Scratch</span>
             <span class="ssubtitle">ItsFoxDev</span>
         </div></a>
@@ -147,6 +150,30 @@
         </a>
       </div>
     </div>
-    <h1 big center>This is some padding added so that you can see the rest of the page content :)</h1>
+    <div id="fbcont" style="display:none;backdrop-filter:blur(0px);opacity:0;">
+      <div id="fbwindow" style="scale:0">
+        <span id="fbtitle">Feedback</span>
+        <select name="Feedback type" id="fbtype">
+          <option value="💡 Idea">💡 Idea</option>
+          <option value="🐛 Bug">🐛 Bug</option>
+          <option value="❓ Question">❓ Question</option>
+          <option value="💬 Contact">💬 Contact</option>
+          <option value="🎲 Other">🎲 Other</option>
+        </select>
+        <textarea placeholder="Write your feedback here..." id="feedback"></textarea>
+        <button onclick="closeFeedback()">
+          <i style="margin-right:5px" class="fas fa-xmark"></i>
+          Close
+        </button>
+        <button primary onclick="sendFB(this)">
+          Send! <i style="margin-left:5px" class="fas fa-paper-plane-top"></i>
+        </button>
+      </div>
+    </div>
+    <div id="bottom">
+      <button small onclick="openFeedback()">💡 Feedback</button>
+      <button darkonly small onclick="modeSwitch('light')">🌕 Light mode</button>
+      <button lightonly small onclick="modeSwitch('dark')">🌑 Dark mode</button>
+    </div>
   </body>
 </html>
