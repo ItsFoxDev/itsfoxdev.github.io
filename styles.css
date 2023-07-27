@@ -1,0 +1,293 @@
+body{
+  background:var(--bg);
+  margin:0px;
+}
+html{
+  scrollbar-gutter: stable;
+  overflow-x:hidden;
+  scroll-behavior: smooth;
+}
+*[only2],*[only3]{display:none !important;}
+@media (min-width: 600px) and (max-width: 800px){
+  :root{--mainbento:1fr 1fr 1fr !important;--sbento:1fr 1fr 1fr !important;}
+  *[only3],*[only23]{display:block !important;}
+  *[hide3],*[only2]{display:none !important;}
+}
+@media (max-width: 600px){
+  :root{--mainbento:1fr 1fr !important;--sbento:1fr 1fr !important;}
+  *[bento] > .double{aspect-ratio: 2.2 / 1 !important;}
+  *[only23]{display:block !important;}
+  *[only2]{display:block !important;}
+  *[hide2]{display:none !important;}
+}
+@media (max-width: 475px){
+  :root{
+    --statsrows:1fr !important;
+    --sra:1 / 3 !important;
+    --bgap:10px !important;
+    --bmar:25px !important;
+    --hbuts:1fr !important;
+    --sbig:16px !important;
+    --ssmall: 12px !important;
+    --sbento:1fr 1FR !important;
+  }
+}
+:root{
+  --mainbento:1fr 1fr 1fr 1fr;
+  --sbento:1fr 1fr 1fr 1fr;
+  --statsrows:1fr 1fr 1fr;
+  --sra:unset;
+  --bgap:25px;
+  --bmar:50px;
+  --sbig:20px;
+  --hbuts:1fr 1fr;
+  --ssmall:16px;
+}
+*{
+  color:var(--text);
+  font-family:Gilroy
+}
+#background,#vignette{
+  position:fixed;
+  inset:0px;
+  z-index:-1;
+  width:100vw;
+  height:100vh;
+}
+#background{
+  background-size: 30px 30px;
+  background-image: radial-gradient(circle, var(--dots) 2px, transparent 1px);
+  animation:background 40s linear infinite
+}
+#vignette{
+  z-index:-1;
+  background-image: radial-gradient(ellipse, transparent 0%, var(--bg) 100%);
+}
+
+@keyframes background{
+  0% {background-position: 50px 0px;}
+  100% {background-position: 1000px 100px;}
+}
+
+#hero{
+  width:calc(100vw - 50px);
+  height:500px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin:0px 25px;
+}
+
+#hero h1{
+  font-size:55px;
+  font-weight:800;
+  margin:0px;
+}
+#hero h3{
+  font-size:35px;
+  font-weight:600;
+  margin:0px;
+  opacity:0.7;
+}
+#toplogo{
+  width:128px;
+  height:128px;
+  -webkit-mask-image:url("https://itsfoxdev.github.io/resources/assets/logo.svg");
+  -webkit-mask-size:128px;
+  mask-image:url("https://itsfoxdev.github.io/resources/assets/logo.svg");
+  mask-size:128px;
+  background: linear-gradient(to bottom, #ffb300 0%, #ff6600 100%);
+  margin-bottom:15px;
+}
+button,#herobtns > a{
+  background:var(--bgsub);
+  border:var(--border);
+  border-radius:10px;
+  font-size: 20px;
+  cursor:pointer;
+  padding:15px 30px;
+  transition:filter .2s ease;
+  filter:none;
+  box-sizing:border-box;
+  text-decoration: none;
+}
+button[primary],#herobtns > a[primary]{
+  position:relative;
+  background:linear-gradient(119deg, rgba(255,105,0,1) 0%, rgba(255,169,0,1) 91%) !important;
+  font-weight:bold;
+  border:var(--borderi);
+  box-shadow:
+    0px 0px 10px 3px var(--primshadow),
+    inset 2px 2px 4px 1px rgba(0, 0, 0, 0.342);
+  transition:color .2s ease;
+  scale:1;
+  transition:box-shadow .2s ease,color .2s ease !important;
+}
+button[primary],button[primary] *,#herobtns > a[primary],#herobtns > a[primary] *{
+  color:#ff8600;
+  transition:box-shadow .2s ease,color .2s ease !important;
+  text-decoration: none;
+}
+button[primary]::after,#herobtns > a[primary]::after{
+  position:absolute;
+  inset:1px;
+  content:"";
+  display:block; 
+  width:calc(100% - 2px);
+  height:calc(100% - 2px);
+  background:var(--bg);
+  border-radius:9px;
+  z-index:-111;
+  transition:opacity .2s ease;
+}
+button[primary]:hover::after,#herobtns > a[primary]:hover::after{
+  opacity:0;
+}
+button[primary]:hover,#herobtns > a[primary]:hover{
+  filter:none;
+  box-shadow:
+    0px 0px 10px 2px #ffa60036,
+    inset 0px 0px 4px 2px rgba(214, 139, 0, 0.336);
+}
+button[primary]:hover, button[primary]:hover *,#herobtns > a[primary]:hover,#herobtns > a[primary]:hover *{
+  color:var(--bg);
+}
+button:hover,#herobtns > a:hover{
+  filter:var(--hovfilter);
+}
+#herobtns{
+  padding-top:20px;
+  display: grid;
+  gap:20px;
+  grid-template-columns: var(--hbuts);
+}
+*[bento] .single{
+  aspect-ratio: 1 / 1;
+}
+*[bento] .double{
+  grid-column:span 2;
+  height:100%;
+}
+*[bento3]{
+  grid-template-columns: var(--statsrows) !important;
+}
+*[bento]{
+  max-width:1000px;
+  margin:auto;
+  display:grid;
+  grid-template-columns: var(--mainbento);
+  gap:var(--bgap);
+  transition:gap .2s ease;
+}
+*[bento] > *{
+  background:var(--blurbg);
+  border:var(--border);
+  box-sizing:border-box;
+  border-radius:10px;
+  backdrop-filter:blur(10px);
+  padding:10px;
+  display:flex;
+  flex-direction: column;
+}
+.bentocont{
+  transition:margin .2s ease;
+  margin:0px var(--bmar);
+}
+*[bento] *{
+  text-align:center;
+}
+.big{
+  font-weight:bolder;
+  font-size:40px;
+}
+#infobento > div{
+  background-size: 50%;
+  transition:background-size .2s ease-out, filter .2s ease;
+  background-blend-mode:lighten; 
+  background-position: center;
+  background-repeat:no-repeat;
+}
+#infobento > div:hover{
+  background-size: 55%;
+}
+
+#projcount{
+  background-image:url("/res/logos/globe.svg");
+}
+#ghcommits{
+  background-image:url("/res/logos/github.svg");
+}
+html.light #projcount{background-image:url("/res/logos/globelight.svg") !important;}
+html.light #ghcommits{background-image:url("/res/logos/githublight.svg") !important;}
+html.light #infobento > div{background-blend-mode:normal !important;}
+
+#projectgrid > a{
+  position:relative;
+  overflow: hidden;
+}
+#projectgrid > a > img{
+  position:absolute;
+  width:100%;
+  inset:0px;
+  transition:scale .2s ease,rotate .2s ease;
+  scale:1;
+}
+#projectgrid > a::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  border-radius:10px;
+  border:0px solid transparent;
+  transition:border .2s, width .2s, height .2s;
+  inset:0px;
+}
+#projectgrid > a:hover::after{
+  border: 3px solid white;
+  width:calc(100% - 6px);
+  height:calc(100% - 6px);
+}
+#projectgrid > a:hover > img{
+  scale:1.035;
+}
+*[bento] > a{
+  transition:filter .2s ease;
+  cursor:pointer;
+}
+*[bento] > a:hover{
+  filter:brightness(1.1);
+}
+
+#infobento > a{
+  border: bevel;
+}
+header{
+  z-index:50;
+  width:calc(100vw - 50px);
+  position:fixed;
+  top:25px;
+  left:25px;
+  right:25px;
+  background:var(--blurbg);
+  backdrop-filter:blur(10px);
+  border-radius:10px;
+  height:75px;
+  border:var(--border);
+}
+
+button[small]{
+  padding:5px 10px;;
+}
+#bottom{
+  display:flex;
+  margin:20px 50px;
+  flex-wrap:wrap;
+  align-content: center;
+  justify-content: center;
+  gap:10px;
+}
+
+*[lightonly]{display:none;}
+html.light *[darkonly]{display:none;}
+html.light *[lightonly]{display:block;}
