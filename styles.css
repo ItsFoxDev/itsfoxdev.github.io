@@ -1,3 +1,37 @@
+/* =====[ 🎨 C O L O U R S ]====================== */
+:root.light{
+  --bg:#dfdfdf !important;
+  --text:#070707 !important;
+  --dots:#42424257 !important;
+  --blurbg:#00000013 !important;
+  --borderc:#0000002f !important;
+  --borderci:#ffffff2f !important;
+  --bgsub:#dfdfdf !important;
+  --hovfilter:brightness(0.8) !important;
+}
+:root{
+  --bg:#070707;
+  --text:#dfdfdf;
+  --dots:#e7e7e728;
+  --blurbg:#ffffff13;
+  --borderc:#ffffff2f;
+  --borderci:#0000002f;
+  --bgsub:#252525;
+  --hovfilter:brightness(1.4);
+}
+:root{
+  --border:1px solid var(--borderc);
+  --borderi:1px solid var(--borderci);
+}
+*[center]{
+  text-align:center;
+}
+h1[big]{
+  font-size:45px;
+}
+
+
+
 body{
   background:var(--bg);
   margin:0px;
@@ -291,3 +325,132 @@ button[small]{
 *[lightonly]{display:none;}
 html.light *[darkonly]{display:none;}
 html.light *[lightonly]{display:block;}
+
+/* =====[ 💬 F E E D B A C K ]====================== */
+
+#fbcont{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width:100vw;
+  height:100vh;
+  position:fixed;
+  inset:0px;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(5px);
+  z-index:100;
+  transition:opacity .2s ease,backdrop-filter .2s ease;
+}
+#fbwindow{
+  background:var(--bg);
+  box-sizing: border-box;
+  width:90vw;
+  height:90vh;
+  max-width:300px;
+  max-height:400px;
+  border-radius:15px;
+  border:var(--border);
+  padding:20px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 30px 25px 1fr 30px;
+  gap:10px;
+  transition:scale .2s ease;
+}
+#fbwindow select{
+  padding:3px 2px;
+  outline:none;
+  grid-column: span 2;
+}
+#fbwindow button{
+  font-size:15px;
+  padding:5px;
+  height:100% !important;
+  border-radius:7.5px !important;
+}
+#fbwindow button::after{
+  border-radius:5px !important;
+}
+#fbwindow select,#feedback,#fbwindow button{
+  background:var(--bgsub);
+  border:var(--border);
+  border-radius:7.5px;
+  outline:none;
+}
+#fbwindow span{
+  font-size:25px;
+  font-weight:bold;
+  text-align: center;
+  grid-column: span 2;
+}
+#feedback{
+  resize:none;
+  grid-column: span 2;
+  padding:5px;
+}
+
+
+/* =====[ 🍱 S O C I A L S   G R I D ]====================== */
+#socialsgrid{
+  display:grid;
+  grid-template-columns: var(--sbento);
+  max-width:1000px;
+  gap:15px;
+  margin:auto;
+}
+#socialsgrid a{
+  padding:10px;
+  background:var(--col);
+  aspect-ratio: 3 / 1;
+  display:flex;
+  align-items:center;
+  border-radius:10px;
+  cursor:pointer;
+  text-decoration: none;
+}
+#socialsgrid a[black] {
+  color:black !important;
+}
+#socialsgrid a i{
+  width:50px;
+  text-align:left;
+  margin-right:-60px;
+  font-size:40px;
+  transition:transform .2s ease,scale .2s ease;
+  color:white !important;
+}
+#socialsgrid a[large] i{
+  font-size:50px;
+}
+#socialsgrid .sgrad{
+  width:70px;
+  height:100%;
+  z-index:1;
+  background: linear-gradient(90deg, transparent 30%, var(--col) 91%);
+  transition:transform .2s ease;
+}
+#socialsgrid .sdet{
+  display:flex;
+  flex-direction: column;
+  z-index:3;
+}
+#socialsgrid .sdet *{
+  font-size:1rem;
+  color:white !important;
+}
+#socialsgrid .stitle{
+  font-weight:bold;
+  font-size:var(--sbig);
+}
+#socialsgrid .ssubtitle{
+  font-size:var(--ssmall);
+}
+#socialsgrid a:hover i{
+  transform:translatex(-10px);
+  scale:1.15;
+}
+#socialsgrid a:hover .sgrad{
+  transform:translatex(10px);
+}
