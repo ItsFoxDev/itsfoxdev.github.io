@@ -7,26 +7,39 @@ html{
   overflow-x:hidden;
   scroll-behavior: smooth;
 }
-*[only3]{
-  display:none !important;
-}
+*[only2],*[only3]{display:none !important;}
 @media (min-width: 600px) and (max-width: 800px){
-  :root{--mainbento:1fr 1fr 1fr !important;}
-  *[only3]{display:block !important;}
-  *[hide3]{display:none !important;}
+  :root{--mainbento:1fr 1fr 1fr !important;--sbento:1fr 1fr 1fr !important;}
+  *[only3],*[only23]{display:block !important;}
+  *[hide3],*[only2]{display:none !important;}
 }
 @media (max-width: 600px){
-  :root{--mainbento:1fr 1fr !important;}
+  :root{--mainbento:1fr 1fr !important;--sbento:1fr 1fr !important;}
   *[bento] > .double{aspect-ratio: 2.2 / 1 !important;}
-  *[only3]{display:block !important;}
-  *[hide3]{display:none !important;}
+  *[only23]{display:block !important;}
+  *[only2]{display:block !important;}
+  *[hide2]{display:none !important;}
 }
-:root{--mainbento:1fr 1fr 1fr 1fr;}
-div.example {
-  font-size: 50px;
-  padding: 50px;
-  border: 8px solid black;
-  background: yellow;
+@media (max-width: 475px){
+  :root{
+    --statsrows:1fr !important;
+    --sra:1 / 3 !important;
+    --bgap:10px !important;
+    --bmar:25px !important;
+    --hbuts:1fr !important;
+    --sbig:16px !important;
+    --ssmall: 12px !important;
+  }
+}
+:root{
+  --mainbento:1fr 1fr 1fr 1fr;
+  --sbento:1fr 1fr 1fr 1fr;
+  --statsrows:1fr 1fr 1fr;
+  --sra:unset;
+  --bgap:25px;
+  --bmar:50px;
+  --sbig:20px;
+  --ssmall:16px;
 }
 *{
   color:var(--text);
@@ -55,12 +68,13 @@ div.example {
 }
 
 #hero{
-  width:100vw;
+  width:calc(100vw - 50px);
   height:500px;
   display:flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin:0px 25px;
 }
 
 #hero h1{
@@ -137,12 +151,12 @@ button[primary]:hover,#herobtns > a[primary]:hover{
 button[primary]:hover, button[primary]:hover *,#herobtns > a[primary]:hover,#herobtns > a[primary]:hover *{
   color:var(--bg);
 }
-button:hover{
+button:hover,#herobtns > a:hover{
   filter:var(--hovfilter);
 }
 #herobtns{
   padding-top:20px;
-  display: flex;
+  display: grid;
   gap:20px;
 }
 *[bento] .single{
@@ -153,14 +167,15 @@ button:hover{
   height:100%;
 }
 *[bento3]{
-  grid-template-columns: 1fr 1fr 1fr !important;
+  grid-template-columns: var(--statsrows) !important;
 }
 *[bento]{
   max-width:1000px;
   margin:auto;
   display:grid;
   grid-template-columns: var(--mainbento);
-  gap:25px;
+  gap:var(--bgap);
+  transition:gap .2s ease;
 }
 *[bento] > *{
   background:var(--blurbg);
@@ -173,7 +188,8 @@ button:hover{
   flex-direction: column;
 }
 .bentocont{
-  margin:0px 50px;
+  transition:margin .2s ease;
+  margin:0px var(--bmar);
 }
 *[bento] *{
   text-align:center;
@@ -258,8 +274,10 @@ header{
 }
 #socialsgrid{
   display:grid;
-  grid-template-columns: var(--mainbento);
+  grid-template-columns: var(--sbento);
   max-width:1000px;
+  gap:15px;
+  margin:auto;
 }
 #socialsgrid a{
   padding:10px;
@@ -267,13 +285,49 @@ header{
   aspect-ratio: 3 / 1;
   display:flex;
   align-items:center;
+  border-radius:10px;
+  cursor:pointer;
+  text-decoration: none;
+}
+#socialsgrid a[black] {
+  color:black !important;
 }
 #socialsgrid a i{
-  width:0px;
+  width:50px;
+  text-align:right;
+  margin-right:-60px;
   font-size:40px;
+  transition:transform .2s ease,scale .2s ease;
 }
-#socialsgrid .sgradient{
-  width:65px;
+#socialsgrid a[large] i{
+  font-size:50px;
+}
+#socialsgrid .sgrad{
+  width:70px;
   height:100%;
+  z-index:1;
   background: linear-gradient(90deg, transparent 30%, var(--col) 91%);
+  transition:transform .2s ease;
+}
+#socialsgrid .sdet{
+  display:flex;
+  flex-direction: column;
+  z-index:3;
+}
+#socialsgrid .sdet *{
+  font-size:1rem;
+}
+#socialsgrid .stitle{
+  font-weight:bold;
+  font-size:var(--sbig);
+}
+#socialsgrid .ssubtitle{
+  font-size:var(--ssmall);
+}
+#socialsgrid a:hover i{
+  transform:translatex(-10px);
+  scale:1.15;
+}
+#socialsgrid a:hover .sgrad{
+  transform:translatex(10px);
 }
