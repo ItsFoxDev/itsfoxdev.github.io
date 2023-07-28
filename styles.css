@@ -252,8 +252,12 @@ button:hover,#herobtns > a:hover{
 #ghcommits{
   background-image:url("/res/logos/github.svg");
 }
+#braincells{
+  background-image:url("/res/logos/brain.svg");
+}
 html.light #projcount{background-image:url("/res/logos/globelight.svg") !important;}
 html.light #ghcommits{background-image:url("/res/logos/githublight.svg") !important;}
+html.light #braincells{background-image:url("/res/logos/brainlight.svg") !important;}
 html.light #infobento > div{background-blend-mode:normal !important;}
 
 #projectgrid > a{
