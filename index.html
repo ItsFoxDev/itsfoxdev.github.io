@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
     <script src="https://itsfoxdev.github.io/resources/scripts/flexkit.js"></script>
     <link rel="stylesheet" href="lib/scrollbar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,13 +48,8 @@
           </h1>
           <h2>I have too much free time</h2>
           <div id="h1btns">
-            <button>
-              <div class="imgs">
-                <img width="48" height="48" src="res/icons/launchpad.png">
-                <img class="blur" width="48" height="48" src="res/icons/launchpad.png">
-              </div>
-              Projects
-            </button>
+            <button style="width:175px" label="Projects" imgsrc="res/icons/launchpad.png"></button>
+            <button style="width:175px" label="About me" imgsrc="res/icons/contacts.png"></button>
           </div>
       </hero>
     </window>
