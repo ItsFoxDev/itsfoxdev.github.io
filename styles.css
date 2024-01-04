@@ -6,6 +6,37 @@ html, body {
   box-sizing:border-box;
   overflow:hidden;
 }
+*{
+  color:white;
+  font-family:Inter;
+}
+
+/* Button styling */
+
+button{
+  border:1px solid #525252;
+  background:#141414;
+  border-radius:15px;
+  display:flex;
+  z-index:1;
+  overflow:hidden;
+}
+button .imgs{
+  width:48px;
+  height:48px;
+  position:relative;
+}
+button .imgs img{
+  position:absolute;
+  z-index:3;
+}
+button .imgs img.blur{
+  scale:2;
+  z-index:2;
+  filter:blur(10px);
+}
+
+/* Window and stoplights */
 
 #background{
   object-fit:cover;
@@ -50,6 +81,9 @@ header{
 #yellowLight{background:#FEBC2E}
 #greenLight{background:#29C740}
 
+
+/* Centered part of the header (Logo and "FoxDev") */
+
 #headerTitle{
   width:100%;
   height:100%;
@@ -59,8 +93,33 @@ header{
   justify-content: center;
 }
 #headerText{
-  font-family:Inter;
-  color:white;
   font-weight:600;
   font-size:16px;
 }
+
+/* Main hero (Hi, I'm FoxDev) */
+
+#hero1{
+  align-content: center;
+  display:flex;
+  justify-content: center;
+  height:80vh;
+  flex-direction: column;
+  align-items: center;
+  font-size:12px;
+}
+#hero1 h1{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  justify-content: center;
+  align-content: center;
+  font-size:4em;
+  margin:0px;
+}
+#hero1 h2{
+  margin:0px;
+  font-weight:400;
+  font-size:2em;
+}
+
