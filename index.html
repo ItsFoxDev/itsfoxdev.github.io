@@ -3,9 +3,11 @@
   <head>
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js"></script>
+    <script src="https://itsfoxdev.github.io/resources/scripts/flexkit.js"></script>
     <link rel="stylesheet" href="lib/scrollbar.css">
-    <link rel="stylesheet" href="https://itsfoxdev.github.io/resources/fonts/gilroy/import.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ItsFoxDev/fa-turbo/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap" rel="stylesheet">
 
 
     <title>FoxDev</title>
@@ -26,163 +28,19 @@
     <meta property="twitter:image" content="https://itsfoxdev.github.io/resources/assets/preview.png" />
   </head>
   <body>
-    <!-- <header>
-
-    </header> -->
-    <div id="background"><div id="vignette"></div></div>
-    <div id="hero">
-      <div id="toplogo"></div>
-      <h1 center>Hi, I'm FoxDev</h1>
-      <h3 center>Coming soon™️</h3>
-      <div id="herobtns">
-        <a primary href="#projects"><i class="fas fa-books"></i> Projects</a>
-        <a href="#socials"><i class="fas fa-share-nodes"></i> Socials</a>
-      </div>
-    </div>
-
-    <h1 center big>Stats</h1>
-    <div class="bentocont">
-      <div bento bento3 id="infobento">
-        <div id="projcount">
-          <span class="big">8</span>
-          Projects
+    <img id="background" src="res/background.jpg">
+    <window>
+      <header>
+        <div id="trafficLights">
+          <div id="redLight"></div>
+          <div id="yellowLight"></div>
+          <div id="greenLight"></div>
         </div>
-        <div id="ghcommits">
-          <span class="big">720+</span>
-          GitHub Commits
+        <div id="headerTitle">
+          <img width="15 " height="15" src="https://itsfoxdev.github.io/resources/assets/logo_white.png">
+          <span id="headerText">FoxDev</span>
         </div>
-        <div id="braincells">
-          <span class="big">2-3</span>
-          Remaining braincells
-        </div>
-      </div>
-    </div>
-    
-    <h1 id="socials" center big style="display: block !important;">Socials</h1>
-    <div id="sgcontainer" class="bentocont">
-      <div id="socialsgrid">
-        <a large white href="https://github.com/ItsFoxDev" style="--col:#010409">
-          <i class="fab fa-github"></i><div class="sgrad"></div><div class="sdet">
-            <span class="stitle">GitHub</span>
-            <span class="ssubtitle">ItsFoxDev</span>
-          </div></a>
-
-        <a white href="https://discord.gg/ZJFvZD6UW4" style="--col:#5865f2">
-          <i class="fab fa-discord"></i><div class="sgrad"></div><div class="sdet">
-            <span class="stitle">Discord</span>
-            <span class="ssubtitle">@ItsFoxDev</span>
-          </div></a>
-        
-        <a white href="https://codepen.io/ItsFoxDev" style="--col:#000">
-          <i class="fab fa-codepen"></i>
-          <div class="sgrad"></div>
-          <div class="sdet">
-            <span class="stitle">Codepen</span>
-            <span class="ssubtitle">@ItsFoxDev</span>
-          </div>
-        </a>
-        
-        <a white href="https://youtube.com/@imfoxdev" style="--col:#e10202">
-          <i class="fab fa-youtube"></i><div class="sgrad"></div><div class="sdet">
-            <span class="stitle">YouTube</span>
-            <span class="ssubtitle">@ImFoxDev</span>
-          </div>
-        </a>
-
-        <a large white href="https://namemc.com/profile/_pvpfox.1" style="--col:#000">
-          <i style="display: flex;"><img alt="NameMC Logo" height="35" src="res/logos/namemc.png"></i><div class="sgrad"></div><div class="sdet">
-            <span class="stitle">NameMC</span>
-            <span class="ssubtitle">_pvpfox</span>
-          </div>
-        </a>
-
-        <a black large href="https://sky.shiiyu.moe/stats/_pvpfox/Papaya" style="--col:#0bb341">
-          <i class="fas fa-chart-simple"></i><div class="sgrad"></div><div class="sdet">
-            <span class="stitle">SkyCrypt</span>
-            <span class="ssubtitle">_pvpfox</span>
-        </div></a>
-
-        <a black large href="https://scratch.mit.edu/users/ItsFoxDev" style="--col:#ff952b">
-          <i style="display: flex;"><img alt="Scratch Logo" height="55" src="res/logos/scratch.png"></i><div class="sgrad"></div><div class="sdet">
-            <span class="stitle">Scratch</span>
-            <span class="ssubtitle">ItsFoxDev</span>
-        </div></a>
-      </div>
-    </div>
-    <h1 id="projects" center big>Projects</h1>
-    <div class="bentocont">
-      <div bento id="projectgrid">
-        <a id="dash" class="double" href="https://itsfoxdev.github.io/dash/">
-          <img src="res/tiles/double/dash.png" alt="Dash Showcase Tile" />
-        </a>
-        <a id="pastezone" class="single" href="https://itsfoxdev.github.io/pastezone/">
-          <img src="res/tiles/pastezone.png" alt="PasteZone Tile" />
-        </a>
-        <a id="screentest" class="single" href="https://itsfoxdev.github.io/projects/screentest">
-          <img src="res/tiles/screentest.png" alt="ScreenTest Tile" />
-        </a>
-        <a id="rickstopper" class="single" href="https://itsfoxdev.github.io/projects/js/rickstopper/install">
-          <img src="res/tiles/rickstopper.png" />
-        </a>
-        <a only3 id="qlbypass" class="single" href="https://itsfoxdev.github.io/projects/js/qlbypass">
-          <img src="res/tiles/qlbypass.png" alt="QLbypass Tile" />
-        </a>
-        <a only3 id="separator" class="single" href="https://itsfoxdev.github.io/separator">
-          <img src="res/tiles/separator.png" alt="Separator Tile" />
-        </a>
-        <a only2 id="timewarp" class="single" href="https://itsfoxdev.github.io/projects/web/timewarp">
-          <img src="res/tiles/timewarp.png" alt="Timewarp" />
-        </a>
-        <a id="zapp" class="double">
-          <img src="res/tiles/double/zapp.png" alt="Zapp Showcase Tile" />
-        </a>
-        <a hide3 id="qlbypass" class="single" href="https://itsfoxdev.github.io/projects/js/qlbypass">
-          <img src="res/tiles/qlbypass.png" alt="QLbypass Tile" />
-        </a>
-        <a hide3 id="separator" class="single" href="https://itsfoxdev.github.io/separator">
-          <img src="res/tiles/separator.png" alt="Separator Tile" />
-        </a>
-        <a hide2 id="timewarp" class="single" href="https://itsfoxdev.github.io/projects/web/timewarp">
-          <img src="res/tiles/timewarp.png" alt="Timewarp Tile" />
-        </a>
-        <a id="tlkt" class="single" href="https://itsfoxdev.github.io/TLKT">
-          <img src="res/tiles/TLKT.png" alt="TLKT Tile" />
-        </a>
-        <a id="macosnewtab" class="single" href="https://github.com/ItsFoxDev/macos-newtab">
-          <img src="res/tiles/macosnewtab.png" alt="macOS New Tab Tile" />
-        </a>
-        <a id="browserget" class="single" href="https://itsfoxdev.github.io/browserget">
-          <img src="res/tiles/browserget.png" alt="Browserget Tile" />
-        </a>
-        <a id="bakesquad" class="single" href="https://itsfoxdev.github.io/BakeSquad">
-          <img src="res/tiles/bakesquad.png" alt="Bake Squad Index Tile" />
-        </a>
-      </div>
-    </div>
-    <div id="fbcont" style="display:none;backdrop-filter:blur(0px);opacity:0;">
-      <div id="fbwindow" style="scale:0">
-        <span id="fbtitle">Feedback</span>
-        <select name="Feedback type" id="fbtype">
-          <option value="💡 Idea">💡 Idea</option>
-          <option value="🐛 Bug">🐛 Bug</option>
-          <option value="❓ Question">❓ Question</option>
-          <option value="💬 Contact">💬 Contact</option>
-          <option value="🎲 Other">🎲 Other</option>
-        </select>
-        <textarea placeholder="Write your feedback here..." id="feedback"></textarea>
-        <button onclick="closeFeedback()">
-          <i style="margin-right:5px" class="fas fa-xmark"></i>
-          Close
-        </button>
-        <button primary onclick="sendFB(this)">
-          Send! <i style="margin-left:5px" class="fas fa-paper-plane-top"></i>
-        </button>
-      </div>
-    </div>
-    <div id="bottom">
-      <button small onclick="openFeedback()">💡 Feedback</button>
-      <button darkonly small onclick="modeSwitch('light')">🌕 Light mode</button>
-      <button lightonly small onclick="modeSwitch('dark')">🌑 Dark mode</button>
-    </div>
+      </header>
+    </window>
   </body>
 </html>
