@@ -5,10 +5,28 @@ html, body {
   height: 100vh;
   box-sizing:border-box;
   overflow:hidden;
+  scroll-behavior: smooth;
 }
 *{
   color:white;
   font-family:Inter;
+}
+
+@media (max-width: 750px){ /* Medium compact mode */
+  content{
+    padding:0px 50px 10px 50px !important;
+  }
+}
+@media (max-width: 575px){ /* Ok getting very compact */
+  content{
+    padding:0px 30px 10px 30px !important;
+  }
+  box#langs lang{
+    grid-template-columns: 1fr !important;
+  }
+  #h1btns button{
+    width:150px !important;;
+  }
 }
 
 /* Button styling */
@@ -25,6 +43,9 @@ button{
   height:48px;
   cursor:pointer;
   transition:border .2s ease;
+}
+a:has(button){
+  text-decoration: none !important;
 }
 button:hover{
   border-color:white;
@@ -65,14 +86,23 @@ window{
   position:fixed;
   inset:30px;
   background:rgba(0,0,0,0.4);
-  display:block;
+  display:flex;
   backdrop-filter:blur(50px);
   border:1px solid #525252;
   border-radius:7.5px;
+  flex-direction: column;
 } 
 header{
   border-bottom:1px solid #525252;
   height:30px;
+  display:block;
+  width:100%;
+}
+content{
+  overflow-y: scroll;
+  height:100vh;
+  scroll-behavior: smooth;
+  padding:0px 100px 10px 100px;
 }
 #trafficLights{
   display:flex;
@@ -120,7 +150,6 @@ header{
   gap:10px;
 }
 #hero1 h1{
-  display:flex;
   align-items:center;
   gap:10px;
   justify-content: center;
@@ -132,10 +161,81 @@ header{
   margin:0px;
   font-weight:400;
   font-size:2em;
+  text-align: center;
 }
 
 #h1btns{
-  display:flex;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
   gap:10px;
   margin-top:5px;
+}
+
+/* About me section */
+#aboutme{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1{
+  text-align: center;
+  font-size:50px;
+}
+#aboutme h1{
+  margin:0px;
+}
+#aboutme *{
+  text-align: center;
+}
+#aboutme p{
+  font-size:18px;
+}
+
+
+
+/* Coding languages grid */
+box#langs{
+  width:100%;
+  display:flex;
+  border:1px solid #525252;
+  max-width:400px;
+  flex-direction: column;
+  align-items: center;
+  border-radius:10px;
+  
+}
+box#langs #ltitle{
+  font-size:20px;
+  font-weight:600;
+  padding:5px 0px;
+  border-bottom:1px solid #525252;
+  width:100%;
+}
+box#langs lgrid{
+  margin:10px 0px 10px 0px;
+  width:calc(100% - 50px);
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:3px 20px;
+}
+box#langs bar{
+  display:block;
+  border:1px solid #525252;
+  border-radius:5px;
+  overflow:hidden;
+  min-height:17.5px;
+}
+box#langs sbar{
+  display:block;
+  height:100%;
+  background:white;
+  border-right:1px solid #525252;
+}
+box#langs lang{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:5px;
+}
+box#langs lang span{
+  text-align: left;
 }
