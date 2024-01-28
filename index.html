@@ -48,69 +48,141 @@
             Hi, I'm FoxDev
             </h1>
             <h2>I was born at a very  young age</h2>
-            <div id="h1btns">
-              <button style="width:175px" label="Projects" imgsrc="res/icons/launchpad.png"></button>
-              <a href="#aboutme"><button style="width:175px" label="About me" imgsrc="res/icons/contacts.png"></button></a>
+              <div id="h1btns">
+              <a class="button" href="#projects">
+                <button style="width:175px" label="Projects" imgsrc="res/icons/launchpad.png"></button>
+              </a>
+              <a class="button" href="#aboutme">
+                <button style="width:175px" label="About me" imgsrc="res/icons/contacts.png"></button>
+              </a>
             </div>
         </hero>
         <section id="aboutme">
           <h1>About me</h1>
-          <p>Hi, I'm FoxDev. I like to make random stuff in my free time.</p>
-          <box id="langs">
-            <span id="ltitle">Skills</span>
-            <lgrid>
-              <!-- -->
-              <lang>
-                <span><i class="fa-solid fa-message-check"></i> English</span>
-                <bar><sbar style="width:90%"></sbar></bar>
-              </lang>
-              <!-- -->
-              <lang>
-                <span><i class="fa-solid fa-croissant"></i> French</span>
-                <bar><sbar style="width:20%"></sbar></bar>
-              </lang>
-              <!-- -->
-              <lang>
-                <span><i class="fa-brands fa-html5"></i> HTML</span>
-                <bar><sbar style="width:70%"></sbar></bar>
-              </lang>
-              <!-- -->
-              <lang>
-                <span><i class="fa-solid fa-square-terminal"></i> Bash</span>
-                <bar><sbar style="width:30%"></sbar></bar>
-              </lang>
-              <!-- -->
-              <lang>
-                <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
-                <bar><sbar style="width:75%"></sbar></bar>
-              </lang>
-              <!-- -->
-              <lang>
-                <span><i class="fa-brands fa-python"></i> Python</span>
-                <bar><sbar style="width:20%"></sbar></bar>
-              </lang>
-              <!-- -->
-              <lang>
-                <span><i class="fa-brands fa-square-js"></i> JS</span>
-                <bar><sbar style="width:45%"></sbar></bar>
-              </lang>
-              <!-- -->
-              <lang>
-                <span><i class="fa-brands fa-java"></i> Java</span>
-                <bar><sbar style="width:10%"></sbar></bar>
-              </lang>
-              <!-- -->
-              <lang>
-                <span><i class="fa-solid fa-block"></i> Scratch</span>
-                <bar><sbar style="width:90%"></sbar></bar>
-              </lang>
-              <!-- -->
-              <lang>
-                <span><i class="fa-solid fa-bed"></i> Sleep</span>
-                <bar><sbar style="width:0%"></sbar></bar>
-              </lang>
-            </lgrid>
-          </box>
+          <p>Hi, I'm FoxDev. I like to make random stuff in my free time.
+            <br><br>
+            <i class="fa-solid fa-location-dot"></i> Toronto, Canada<br>
+            <i class="fa-solid fa-heart"></i> Rowing, Design, Photography<br>
+            <i class="fa-solid fa-thumbs-up"></i> Skiing, Swimming<br>
+          </p>
+          <div id="boxes">
+            <box id="socials">
+              <span class="title">Find me on</span>
+              <flex>
+                <a class="social" href="https://github.com/ItsFoxDev">
+                  <img src="res/icons/github.png"></img>
+                </a>
+                <a class="social" href="https://scratch.mit.edu/users/ItsFoxDev">
+                  <img src="res/icons/scratch.png"></img>
+                </a>
+                <a class="social" href="">
+                  <img src="res/icons/discord.png"></img>
+                </a>
+                <a class="social" href="https://youtube.com/@imfoxdev">
+                  <img src="res/icons/youtube.png"></img>
+                </a>
+                <a class="social" href="https://codepen.io/ItsFoxDev">
+                  <img src="res/icons/codepen.png"></img>
+                </a>
+                <a class="social" href="https://github.com/ItsFoxDev">
+                  <img src="res/icons/mail.png"></img>
+                </a>
+                <a class="social" href="https://sky.shiiyu.moe/stats/_pvpfox/Papaya">
+                  <img src="res/icons/skycrypt.png"></img>
+                </a>
+                <a class="social" href="https://steamcommunity.com/id/itsfoxdev/">
+                  <img src="res/icons/steam.png"></img>
+                </a>
+                <a class="social" href="https://dribbble.com/ItsFoxDev">
+                  <img src="res/icons/dribbble.png"></img>
+                </a>
+                <a class="social" href="https://macosicons.com/#/u/foxdev">
+                  <img src="res/icons/macosicons.png"></img>
+                </a>
+                <!-- <a class="button" href="https://github.com/ItsFoxDev">
+                  <button label="GitHub" sublabel="ItsFoxDev"  imgsrc="res/icons/github.png"></button>
+                </a>
+                <a class="button" href="https://github.com/ItsFoxDev">
+                  <button label="Discord" sublabel="itsfoxdev"  imgsrc="res/icons/discord.png"></button>
+                </a>
+                <a class="button" href="https://youtube.com/@imfoxdev">
+                  <button label="YouTube" sublabel="imfoxdev"  imgsrc="res/icons/youtube.png"></button>
+                </a>
+                <a class="button" href="https://scratch.mit.edu/users/ItsFoxDev">
+                  <button label="Scratch" sublabel="ItsFoxDev"  imgsrc="res/icons/scratch.png"></button>
+                </a>
+                <!-- -->
+              </dgrid>
+            </box>
+            <box id="langs">
+              <span class="title">Skills</span>
+              <dgrid>
+                <!-- -->
+                <lang>
+                  <span><i class="fa-solid fa-message-check"></i> English</span>
+                  <bar><sbar style="width:85%"></sbar></bar>
+                </lang>
+                <!-- -->
+                <lang>
+                  <span><i class="fa-solid fa-croissant"></i> French</span>
+                  <bar><sbar style="width:25%"></sbar></bar>
+                </lang>
+                <!-- -->
+                <lang>
+                  <span><i class="fa-brands fa-html5"></i> HTML</span>
+                  <bar><sbar style="width:70%"></sbar></bar>
+                </lang>
+                <!-- -->
+                <lang>
+                  <span><i class="fa-solid fa-square-terminal"></i> Bash</span>
+                  <bar><sbar style="width:30%"></sbar></bar>
+                </lang>
+                <!-- -->
+                <lang>
+                  <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                  <bar><sbar style="width:75%"></sbar></bar>
+                </lang>
+                <!-- -->
+                <lang>
+                  <span><i class="fa-brands fa-python"></i> Python</span>
+                  <bar><sbar style="width:20%"></sbar></bar>
+                </lang>
+                <!-- -->
+                <lang>
+                  <span><i class="fa-brands fa-square-js"></i> JS</span>
+                  <bar><sbar style="width:45%"></sbar></bar>
+                </lang>
+                <!-- -->
+                <lang>
+                  <span><i class="fa-brands fa-java"></i> Java</span>
+                  <bar><sbar style="width:10%"></sbar></bar>
+                </lang>
+                <!-- -->
+                <lang>
+                  <span><i class="fa-solid fa-block"></i> Scratch</span>
+                  <bar><sbar style="width:90%"></sbar></bar>
+                </lang>
+                <!-- -->
+                <lang>
+                  <span><i class="fa-solid fa-bed"></i> Sleep</span>
+                  <bar></bar>
+                </lang>
+              </dgrid>
+            </box>
+          </div>
+        </section>
+        <section id="projects">
+          <flex>
+            <h1>Projects</h1>
+            <flex id="projectcontrols">
+              <flex id="filtercontrols">
+                <button onclick="cc1(this,'all')" class="c11 fc ns ab1"><i class="fa-solid fa-circle-check"></i> <span>All</span></button>
+                <button onclick="cc1(this,'web')" class="c12 ns"> <i class="fa-solid fa-globe"></i> <span>Websites</span></button>
+                <button onclick="cc1(this,'js')"  class="c13 ns"> <i class="fa-solid fa-code"></i> <span>Scripts</span></button>
+                <button onclick="cc1(this,'sc')"  class="c14 lc ns"> <i class="fa-solid fa-layer-group"></i> <span>Shortcuts</span></button>
+              </flex>
+            </flex>
+          </flex>
         </section>
       </content>
     </window>

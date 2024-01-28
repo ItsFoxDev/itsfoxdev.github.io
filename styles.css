@@ -44,7 +44,16 @@ button{
   cursor:pointer;
   transition:border .2s ease;
 }
-a:has(button){
+button.ns{
+  padding:10px;
+}
+a.button{
+  display:flex;
+}
+a > button{
+  width:100%;
+}
+a.button{
   text-decoration: none !important;
 }
 button:hover{
@@ -65,6 +74,22 @@ button .imgs img.blur{
   z-index:2;
   filter:blur(10px);
   opacity:0.5;
+}
+button .txts{
+  display:flex;
+  flex-direction:column;
+  align-items:left;
+}
+button .txts span{
+  text-align: left !important;
+}
+button .txts .tsub{
+  font-size:12px;
+  font-weight:600;
+  color:rgba(255,255,255,0.75)
+}
+button .txts .tmain{
+  font-size:20px;
 }
 
 /* Window and stoplights */
@@ -102,7 +127,7 @@ content{
   overflow-y: scroll;
   height:100vh;
   scroll-behavior: smooth;
-  padding:0px 100px 10px 100px;
+  padding:0px 50px 10px 50px;
 }
 #trafficLights{
   display:flex;
@@ -194,7 +219,7 @@ h1{
 
 
 /* Coding languages grid */
-box#langs{
+box{
   width:100%;
   display:flex;
   border:1px solid #525252;
@@ -202,16 +227,15 @@ box#langs{
   flex-direction: column;
   align-items: center;
   border-radius:10px;
-  
 }
-box#langs #ltitle{
+box > .title{
   font-size:20px;
   font-weight:600;
   padding:5px 0px;
   border-bottom:1px solid #525252;
   width:100%;
 }
-box#langs lgrid{
+dgrid{
   margin:10px 0px 10px 0px;
   width:calc(100% - 50px);
   display:grid;
@@ -238,4 +262,74 @@ box#langs lang{
 }
 box#langs lang span{
   text-align: left;
+}
+
+#boxes{
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  gap:10px;
+  align-content: center;
+}
+
+.social img{
+  width:64px;
+  border: 1px solid transparent;
+  transition:border .2s ease, border-radius .2s ease;
+  cursor:pointer;
+}
+#socials > flex{
+  gap:0px;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-content: center;
+  align-items:  center;
+  padding-top:2px;
+}
+#socials .social img:hover{
+  border: 1px solid #ffffffbf;
+  border-radius:17px;
+}
+#projects > flex{
+  flex-wrap:wrap;
+  align-items: center;
+  gap:10px;
+  justify-content: space-between
+
+}
+#projects > flex > h1{
+  margin:0px;
+}
+#filtercontrols button{
+  height:40px;
+  width:40px;
+  transition:width 0.3s ease, border 0.3s ease;
+  display:block;
+  font-size:15px;
+  padding:0px;
+  border-radius:0px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap:5px;
+}
+#filtercontrols button span{
+  margin-left:-5px;
+  transition:font-size 0.3s ease, margin 0.3s ease;
+  display:block;
+  font-size:0px;
+}
+.ab1,.ab2{width:125px !important;}
+.ab1 span,.ab2 span{font-size:15px !important;margin-left: 0px !important;}
+
+#filtercontrols button.fc{
+  border-radius:10px 0px 0px 10px;
+}
+#filtercontrols button.lc{
+  border-radius:0px 10px 10px 0px;
+}
+#projects{
+  margin-top: 25px;
 }
