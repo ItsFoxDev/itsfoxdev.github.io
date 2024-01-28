@@ -53,7 +53,7 @@ a.button{
 a > button{
   width:100%;
 }
-a.button{
+a{
   text-decoration: none !important;
 }
 button:hover{
@@ -291,14 +291,17 @@ box#langs lang span{
   border: 1px solid #ffffffbf;
   border-radius:17px;
 }
-#projects > flex{
+#projects{
+  max-width:825px;
+}
+#projects > #projectheader{
   flex-wrap:wrap;
   align-items: center;
   gap:10px;
   justify-content: space-between
 
 }
-#projects > flex > h1{
+#projects > #projectheader > h1{
   margin:0px;
 }
 #filtercontrols button{
@@ -332,4 +335,20 @@ box#langs lang span{
 }
 #projects{
   margin-top: 25px;
+}
+#projectheader{
+  margin-bottom: 10px;;
+}
+#maingrid{
+  grid-template-columns: 1fr 1fr 1fr;
+  width:100%;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding:0px;
+}
+#maingrid > a{
+  width:100%;
+  min-width:175px;
 }
