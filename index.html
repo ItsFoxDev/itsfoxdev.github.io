@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ItsFoxDev/fa-turbo/css/all.min.css" />
 
 
     <title>FoxDev</title>
@@ -178,7 +179,7 @@
               <flex id="filtercontrols">
                 <button onclick="cc1(this,'all')" class="c11 fc ns ab1"><i class="fa-solid fa-circle-check"></i> <span>All</span></button>
                 <button onclick="cc1(this,'web')" class="c12 ns"> <i class="fa-solid fa-globe"></i> <span>Websites</span></button>
-                <button onclick="cc1(this,'js')"  class="c13 ns"> <i class="fa-solid fa-code"></i> <span>Scripts</span></button>
+                <button onclick="cc1(this,'scpt')"  class="c13 ns"> <i class="fa-solid fa-code"></i> <span>Scripts</span></button>
                 <button onclick="cc1(this,'sc')"  class="c14 lc ns"> <i class="fa-solid fa-layer-group"></i> <span>Shortcuts</span></button>
               </flex>
             </flex>
@@ -187,20 +188,105 @@
             <flex id="bigprojects">
               <!-- -->
             </flex>
-            <grid id="maingrid">
-              <a href="https://itsfoxdev.github.io/pastezone/"><button label="Pastezone" imgsrc="res/icons/pastezone.png"></button></a>
-              <a href="https://itsfoxdev.github.io/pastezone/"><button label="Rickstopper " imgsrc="res/icons/rickstopper.png"></button></a>
-              <a href="https://itsfoxdev.github.io/pastezone/"><button label="Pastezone" imgsrc="res/icons/pastezone.png"></button></a>
-              <a href="https://itsfoxdev.github.io/pastezone/"><button label="Rickstopper " imgsrc="res/icons/rickstopper.png"></button></a>
-              <a href="https://itsfoxdev.github.io/pastezone/"><button label="Pastezone" imgsrc="res/icons/pastezone.png"></button></a>
-              <a href="https://itsfoxdev.github.io/pastezone/"><button label="Rickstopper " imgsrc="res/icons/rickstopper.png"></button></a>
-              <a href="https://itsfoxdev.github.io/pastezone/"><button label="Pastezone" imgsrc="res/icons/pastezone.png"></button></a>
-              <a href="https://itsfoxdev.github.io/pastezone/"><button label="Rickstopper " imgsrc="res/icons/rickstopper.png"></button></a>
-              <a href="https://itsfoxdev.github.io/pastezone/"><button label="Rickstopper " imgsrc="res/icons/rickstopper.png"></button></a>
+            <grid id="maingrid" class="all">
+              <a all web href="https://itsfoxdev.github.io/pastezone/"><button label="Pastezone" imgsrc="res/icons/pastezone.png"></button></a>
+              <a all web href="https://itsfoxdev.github.io/Separator/"><button label="Separator" imgsrc="res/icons/separator.png"></button></a>
+              <a all scpt href="https://itsfoxdev.github.io/projects/js/rickstopper/install/"><button label="Rickstopper" imgsrc="res/icons/rickstopper.png"></button></a>
+              <a all web href="https://itsfoxdev.github.io/projects/screentest/"><button label="Screentest" imgsrc="res/icons/screentest.png"></button></a>
+              <a all scpt href="https://itsfoxdev.github.io/projects/js/qlbypass/"><button label="QLBypass" imgsrc="res/icons/qlbypass.png"></button></a>
+              <a all web href="https://itsfoxdev.github.io/projects/js/qlbypass/"><button label="BrowserGet" imgsrc="res/icons/browserget.png"></button></a>
+              <a all scpt href="https://itsfoxdev.github.io/dash/"><button label="dash." imgsrc="res/icons/dash.png"></button></a>
             </grid>
+          </flex>
+        </section>
+        <section id="other">
+          <h2>Other</h2>
+          <flex style="gap:5px;">
+            <button id="fbbutton" onclick="activateWindow('archives')" imgsrc="./res/icons/timemachine.png" label="Archives"></button>
+            <button id="fbbutton" onclick="activateWindow('feedback')" imgsrc="./res/icons/feedback.png" label="Feedback"></button>
           </flex>
         </section>
       </content>
     </window>
+    <modal icon=/res/icons/timemachine.png" title="Archives" id="archives">
+      <div id="archivescroll">
+        <!-- -->
+        <a class="archivebox" href="https://itsfoxdev.github.io/archives/site/v3"></class>
+          <img class="archthumb" src="./res/archivebanners/v3.png">
+          <div class="archivehover">
+            <div class="archivehovercontent">
+              <li>First version I could recover</li>
+              <li>Only 1 button and 2 links</li>
+              <li>Creations button didn't work</li>
+            </div>
+          </div>
+        </a>
+        <!-- -->
+        <a class="archivebox" href="https://itsfoxdev.github.io/archives/site/v4"></class>
+          <img class="archthumb" src="./res/archivebanners/v4.png">
+          <div class="archivehover">
+            <div class="archivehovercontent">
+              <li>Top section similar to V3</li>
+              <li>New projects section</li>
+              <li>Added buttons to header</li>
+            </div>
+          </div>
+        </a>
+        <!-- -->
+        <a class="archivebox" href="https://itsfoxdev.github.io/archives/site/v5"></class>
+          <img class="archthumb" src="./res/archivebanners/v5.png">
+          <div class="archivehover">
+            <div class="archivehovercontent">
+              <li>Very similar to V4</li>
+              <li>Projects section redesigned</li>
+              <li>More projects added</li>
+              <li>New hover animation</li>
+            </div>
+          </div>
+        </a>
+        <!-- -->
+        <a class="archivebox" href="https://itsfoxdev.github.io/archives/site/v6"></class>
+          <img class="archthumb" src="./res/archivebanners/v6.png">
+          <div class="archivehover">
+            <div class="archivehovercontent">
+              <li>Complete redesign</li>
+              <li>Separate projects page</li>
+              <li>More social links</li>
+              <li>Another new hover animation</li>
+              <li>Interactive background</li>
+            </div>
+          </div>
+        </a>
+        <!-- -->
+        <a class="archivebox" href="https://itsfoxdev.github.io/archives/site/v7"></class>
+          <img class="archthumb" src="./res/archivebanners/v7.png">
+          <div class="archivehover">
+            <div class="archivehovercontent">
+              <li>Complete redesign</li>
+              <li>One page again</li>
+              <li>Even more social links</li>
+              <li>Bento style project grid</li>
+              <li>Quick stats section</li>
+              <li>Feedback forml</li>
+            </div>
+          </div>
+        </a>
+        <!-- -->
+      </div>
+    </modal>
+    <modal icon=/res/icons/feedback.png" title="Feedback" id="feedback">
+      <select id="fbtype" name="fbtype" label=>
+        <option value="💡 Idea">💡 Idea</option>
+        <option value="🐛 Bug">🐛 Bug</option>
+        <option value="❓ Question">❓ Question</option>
+        <option value="💬 Contact">💬 Contact</option>
+        <option value="🎲 Other">🎲 Other</option>
+      </select>
+      <input id="fbemail" type="email" placeholder="Email (Optional)">
+      <textarea id="fbcontent" type="feedback" placeholder="Your feedback"></textarea>
+      <button onclick="sendFB()" class="ns" id="fbsend"><i class="fa-solid fa-paper-plane-top"></i> Send</button>
+    </modal>
+    <mbg></mbg>
   </body>
 </html>
+<!-- Hello there. -->
